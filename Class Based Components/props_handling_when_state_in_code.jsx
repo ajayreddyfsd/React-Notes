@@ -19,6 +19,7 @@ class GreetCounter extends Component {
         <h1>Hello, {this.props.name}!</h1>
         <p>Clicked {this.state.count} times</p>
         <button onClick={this.increment}>Click Me</button>
+        <button onClick={() => this.increment()}>Click Me</button>
       </div>
     );
   }

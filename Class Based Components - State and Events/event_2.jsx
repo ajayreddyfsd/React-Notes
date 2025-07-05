@@ -14,7 +14,7 @@ class Counter extends Component {
     };
   }
 
-  //state updating method  
+  //state updating method
   increment = () => {
     this.setState({ count: this.state.count + 1 });
   };
@@ -23,6 +23,8 @@ class Counter extends Component {
     return (
       <div>
         <p>Count is: {this.state.count}</p>
+
+        {/* events passed to onClick */}
         <button onClick={this.increment}>Click Me</button>
         <button onClick={() => this.increment()}>Click Me</button>
       </div>
@@ -31,3 +33,12 @@ class Counter extends Component {
 }
 
 export default Counter;
+
+
+// If you want to call the function immediately or pass arguments, use an arrow function:
+//   onClick={() => this.someMethod()}
+
+// If you just want to pass the function reference (no arguments), pass it directly:
+//   onClick={this.someMethod}
+
+// Since arrow functions bind 'this' automatically, passing the method directly works well

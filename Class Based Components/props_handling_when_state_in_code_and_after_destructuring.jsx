@@ -25,6 +25,7 @@ class UserGreeting extends Component {
         </h1>
         <p>You clicked {this.state.count} times</p>
         <button onClick={this.increment}>Click Me</button>
+        <button onClick={() => this.increment()}>Click Me</button>
       </div>
     );
   }
