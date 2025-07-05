@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 class MyClassComponent extends Component {
+  //other methods of the class
+
+  //other methods of the class
+
+  //class's render method
   render() {
     return (
       <div>
