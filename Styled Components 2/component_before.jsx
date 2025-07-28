@@ -1,21 +1,21 @@
-// StyledComponentsExampleBefore.jsx
+// StyledExampleBefore.jsx
 import React from 'react';
-import './StyledComponentsExampleBefore.scss'; // Regular SCSS file
+import { Link } from 'react-router-dom';
+import './StyledExampleBefore.scss';
 
-function StyledComponentsExampleBefore() {
+function StyledExampleBefore() {
   return (
     <div className="container">
-      <h2>Hello 👋</h2>
-      <a href="#" className="link">Visit Link</a>
-      <br />
+      <h2 className="title">Hello 👋</h2>
+      <a href="#" className="link">External Link</a><br />
+      <Link to="/about" className="router-link">About Page</Link><br />
       <button className="button">Click Me</button>
       <ul className="list">
         <li className="list-item">First item</li>
         <li className="list-item">Second item</li>
-        <li className="list-item">Third item</li>
       </ul>
     </div>
   );
 }
 
-export default StyledComponentsExampleBefore;
+export default StyledExampleBefore;

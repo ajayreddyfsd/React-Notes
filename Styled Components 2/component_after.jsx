@@ -1,27 +1,28 @@
-// StyledComponentsExample.jsx
+// StyledExampleAfter.jsx
 import React from 'react';
 import {
   StyledContainer,
-  StyledLink,
+  StyledTitle,
+  StyledAnchor,
+  StyledRouterLink,
   StyledButton,
   StyledList,
   StyledListItem
-} from './StyledComponentsExample.styles';
+} from './StyledExampleAfter.styles';
 
-function StyledComponentsExample() {
+function StyledExampleAfter() {
   return (
     <StyledContainer>
-      <h2>Hello 👋</h2>
-      <StyledLink href="#">Visit Link</StyledLink>
-      <br />
+      <StyledTitle>Hello 👋</StyledTitle>
+      <StyledAnchor href="#">External Link</StyledAnchor><br />
+      <StyledRouterLink to="/about">About Page</StyledRouterLink><br />
       <StyledButton>Click Me</StyledButton>
       <StyledList>
         <StyledListItem>First item</StyledListItem>
         <StyledListItem>Second item</StyledListItem>
-        <StyledListItem>Third item</StyledListItem>
       </StyledList>
     </StyledContainer>
   );
 }
 
-export default StyledComponentsExample;
+export default StyledExampleAfter;
