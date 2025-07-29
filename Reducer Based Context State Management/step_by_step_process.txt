@@ -1,0 +1,17 @@
+✅ Reducer-based Context (useReducer) – Overview
+
+Create an INITIAL_STATE object — a single object holding all related state pieces
+
+Define ACTION_TYPES — a set of clear string constants representing how state can be updated
+
+
+Write a reducer function:
+Accepts (state, action)
+Uses switch (or if) to return a new state based on action type
+
+
+Inside the provider:
+Use const [state, dispatch] = useReducer(...)
+Write helper functions that dispatch actions
+Pass everything into value
+Provide the value via <Context.Provider value={value}>
