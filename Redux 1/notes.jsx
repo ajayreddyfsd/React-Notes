@@ -4,6 +4,9 @@
 🟩 1. What is Redux?
 Redux is a global state manager — like a big version of context.
 It lets you manage app-wide state in one place.
+like context is a bucket. redux is a smart bucket.
+
+
 
 🟩 2. What are the 4 main parts in Redux logic (per feature)?
 Each feature (like counter, cart, etc.) usually has:
@@ -17,6 +20,8 @@ Each feature (like counter, cart, etc.) usually has:
   └────────────┘
      ↓
   selectors.js ➜ Functions that extract state (e.g., selectCount)
+
+
 
 🟩 3. What is combineReducers?
 
@@ -36,6 +41,8 @@ state = {
   cart: { cartItems: [...] }
 }
 
+
+
 🟩 4. How do we create the Redux store?
 
 We pass that combined reducer to createStore():
@@ -45,6 +52,8 @@ We pass that combined reducer to createStore():
 This is like doing:
   const [state, dispatch] = useReducer(rootReducer, initialState)
 
+
+
 🟩 5. How do we give Redux to our React app?
 
 We wrap our app in a Provider:
@@ -53,6 +62,8 @@ We wrap our app in a Provider:
     <App />
   </Provider>
 
+
+  
 🟩 6. How do we access the Redux state inside a component?
 
 ✅ useSelector → like useContext → gives access to state

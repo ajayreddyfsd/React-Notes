@@ -6,3 +6,6 @@ import rootReducer from './redux/rootReducer';
 const store = createStore(rootReducer);
 
 export default store;
+
+//? last step
+//? dont forget to wrap around in app.js with <Provider store={store}>

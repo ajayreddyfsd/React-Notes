@@ -11,3 +11,7 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+
+//! global state gets combined as well
+//! and we need to access items like state.reducer.item
