@@ -12,6 +12,10 @@ import { selectCartItems } from "../../store/cart/cart.selector";
 //! we use this component inside checkout route to dispplay each checkout-item
 const CheckoutItem = ({ cartItem }) => {
   const dispatch = useDispatch();
+
+  //! why useSelector? in first place, 
+  //! why cant we just directly use the value returned by selector function?
+  //! answer is explained below
   const cartItems = useSelector(selectCartItems);
 
   const { name, imageUrl, price, quantity } = cartItem;
@@ -49,3 +53,8 @@ const CheckoutItem = ({ cartItem }) => {
 };
 
 export default CheckoutItem;
+
+//! so we are importing the selector function which returns the value we need
+// which is then fed to useSelector, and we are using the value in the component through useSelector
+// why we need useSelector in the middle, why can't we just use the value returned by the selector function directly?
+// coz there are some things happening BTS, we need to take it through useSelector

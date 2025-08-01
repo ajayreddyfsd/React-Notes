@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
       </div>
       <Button
         buttonType="inverted"
-        onClick={() => dispatch(addItemToCart(cartItems, product))}
+        onClick={() => dispatch(addItemToCart(cartItems, product))} //! watch below comment
       >
         Add to cart
       </Button>
@@ -28,3 +28,8 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
+
+//! so we are imporitng the action-creator function which returns the action object
+//! this action object is then fed to dispatch, 
+//! and dispatch then dispatches the action object to the reducer, 
+//! then reducer takes it from there and updates the state
