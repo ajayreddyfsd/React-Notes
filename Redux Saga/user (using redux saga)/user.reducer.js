@@ -18,7 +18,6 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     case USER_ACTION_TYPES.CHECK_USER_SESSION:
       return {
         ...state,
-        isLoading: true,
         error: null,
       };
 
@@ -28,7 +27,6 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     case USER_ACTION_TYPES.SET_CURRENT_USER:
       return {
         ...state,
-        isLoading: false,
         currentUser: payload.user ?? payload, // to support both shaped payloads
         error: null,
       };
@@ -36,7 +34,6 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     case USER_ACTION_TYPES.SIGN_OUT_SUCCESS:
       return {
         ...state,
-        isLoading: false,
         currentUser: null,
         error: null,
       };
@@ -47,7 +44,6 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     case USER_ACTION_TYPES.SIGN_OUT_FAILED:
       return {
         ...state,
-        isLoading: false,
         error: payload,
       };
 

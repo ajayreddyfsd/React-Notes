@@ -38,6 +38,9 @@ export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
       userAuth,
       additionalDetails
     );
+    console.log("userSnapshot", userSnapshot.data());
+
+    //need to extract id and data or else, we gonna end up putting documentsnapshot in the user part of global redux state
     yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
   } catch (error) {
     yield put(signInFailed(error));
@@ -127,6 +130,19 @@ export function* signOut() {
   }
 }
 
+export function* getUserDetails({ payload: user }) {
+  try {
+    const userSnapshot = yield call(createUserDocumentFromAuth, user.id);
+    if (userSnapshot && userSnapshot.exists()) {
+      yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
+    } else {
+      console.error("User snapshot is null or does not exist");
+    }
+  } catch (error) {
+    yield put(signInFailed(error));
+  }
+}
+
 //? helper sagas end
 //? helper sagas end
 //? helper sagas end
@@ -165,6 +181,10 @@ export function* onCheckUserSession() {
   yield takeLatest(USER_ACTION_TYPES.CHECK_USER_SESSION, isUserAuthenticated);
 }
 
+export function* onSignInSuccessGetUserDetails() {
+  yield takeLatest(USER_ACTION_TYPES.SIGN_IN_SUCCESS, getUserDetails);
+}
+
 //? saga listeners end
 //? saga listeners end
 //? saga listeners end
@@ -180,5 +200,6 @@ export function* userSagas() {
     call(onSignUpStart),
     call(onSignUpSuccess),
     call(onSignOutStart),
+    call(onSignInSuccessGetUserDetails), // EXTRA watcher
   ]);
 }
