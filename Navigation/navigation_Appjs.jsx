@@ -8,6 +8,8 @@ import Products from "./Products";
 function App() {
   return (
     <Router>
+      //! correct! but, usually we put navigation component also as one of
+      //! the routes, but nested route
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

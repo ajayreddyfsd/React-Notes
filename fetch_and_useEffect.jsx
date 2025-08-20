@@ -1,3 +1,8 @@
+//! useEffect() for side things
+//! useEffect() for side things
+//! useEffect() for side things
+//! useEffect() for side things
+
 import React, { useState, useEffect } from "react";
 
 function DataFetcher() {

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-//useLocation - to recieve the data sent by useNavigate if it sends at all
+//! useLocation - to recieve the data sent by useNavigate if it sends at all
 
 function Receiver() {
   // Access the sent data

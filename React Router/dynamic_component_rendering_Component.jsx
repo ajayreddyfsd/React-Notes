@@ -14,7 +14,8 @@ function DynamicComponent() {
     user: UserProfile,
   };
 
-  // Step 3: Extract dynamic part of URL (e.g., "home" from "/home")
+  //! Step 3: Extract dynamic part of URL (e.g., "home" from "/home")
+  //! and based on that data, we decide what component to display
   const { pageName } = useParams();
 
   // Step 4: Select the component to render

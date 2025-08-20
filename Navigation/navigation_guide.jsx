@@ -1,6 +1,7 @@
 //   COMPLETE REACT ROUTER GUIDE FOR BEGINNERS
 //   ========================================
 
+//! if u r using some things in your components, then wrapping those components and app.js around router-wrappers
 //   1. ROUTER WRAPPER (MANDATORY)
 //   -----------------------------
 //   - The <BrowserRouter> (aliased as Router) creates the routing context
@@ -22,6 +23,7 @@
 //   );
 // }
 
+//! talks about types of routes
 // 2. ROUTES DEFINITION
 // --------------------
 // - ALL application paths must be defined in <Routes>
@@ -31,25 +33,14 @@
 
 // Example:
 // <Routes>
-//   <Route path="/user/:id" element={<Profile/>} />  /* Dynamic route */
+//   <Route path="/user/:id" element={<Profile/>} />  //! Dynamic route
 //   <Route path="/about" element={<About/>} />
 //   <Route path="/" element={<Home/>} />             /* Default route */
 //   <Route path="*" element={<NotFound/>} />         /* 404 catch-all */
+//   <Route path="shop/*" element={<NotFound />} />   //! child comps inside shop comp
 // </Routes>
 
-// 3. COMPONENT TYPES
-// -----------------
-// A) ROUTING-DEPENDENT COMPONENTS:
-//    - Use routing features (listed in section 1)
-//    - MUST be inside <Router>
-//    - Examples: Navbars, Page layouts, Protected routes
-
-// B) NORMAL COMPONENTS:
-//    - Don't use routing features
-//    - Can be used anywhere
-//    - Examples: Buttons, Cards, static Footers
-
-// 4. COMMON PITFALLS
+//! 4. COMMON PITFALLS
 // -----------------
 // - Blank pages? Check:
 //   * Is <Router> wrapping everything?
@@ -57,7 +48,7 @@
 
 // */}
 
-//   REACT ROUTER GOLDEN RULES:
+//!   REACT ROUTER GOLDEN RULES:
 
 //   1. The <Router> is like a "power strip" - it gives routing ability to everything plugged into it
 //   2. There are TWO ways to plug components in:
@@ -108,13 +99,13 @@
 */
 }
 
-// ✅ CORRECT STRUCTURE
+//$ ✅ CORRECT STRUCTURE
 // <Router>
-//   {/* These appear on ALL pages */}
+//!   {/* These appear on ALL pages */}
 //   <Header /> {/* Uses <Link> but doesn't need route matching */}
 //   <Navbar /> {/* Same */}
 //   <Routes>
-//     {/* These only appear at their specific URLs */}
+//!     {/* These only appear at their specific URLs */}
 //     <Route path="/" element={<Home />} />
 //     <Route path="/login" element={<Login />} /> {/* Only at /login */}
 //     <Route path="/dashboard" element={<Dashboard />} />

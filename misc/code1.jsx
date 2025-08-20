@@ -62,6 +62,8 @@ const SignIn = () => {
     }
   };
 
+  //! constantly getting the data from the input-tag, and updating the state variables
+  //! and once submitted, it starts its job with that stored data
   const handleChange = (event) => {
     const { name, value } = event.target;
 

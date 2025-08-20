@@ -23,7 +23,7 @@ export const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const value = { currentUser, setCurrentUser };
 
-  // When the app loads, this sets up a listener to watch for changes in the user's auth status.
+  //! When the app loads, this sets up a listener to watch for changes in the user's auth status.
   // If the user logs in or logs out, we update currentUser in our context.
   // This keeps the whole app in sync with the user's login state.
   // the below function and the OAuth in firebase util work hand in hand to track auth state and maintain it globally

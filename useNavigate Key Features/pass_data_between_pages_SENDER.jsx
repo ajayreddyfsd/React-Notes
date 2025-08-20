@@ -5,6 +5,7 @@ function Sender() {
 
   const sendMessage = () => {
     // Navigate to "/receiver" and send a hidden message
+    //$ navigating, as well as sending some data, which we will extract using useLocation
     navigate("/receiver", {
       state: {
         text: "Hello!",

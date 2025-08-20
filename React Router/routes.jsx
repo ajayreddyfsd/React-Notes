@@ -20,10 +20,11 @@ function App() {
         <Route path="/about" element={<About />} />
 
         {/* RULE 3: If URL doesn't match, show a 404 page */}
-        <Route path="*" element={<h1>404 Not Found! 🚫</h1>} />
+        <Route path="*" element={<h1>404 Not Found! 🚫</h1>} /> //! FOR ALL OTHER UNSPECIFIED PATHS
       </Routes>
     </Router>
   );
 }
 
 export default App;
+

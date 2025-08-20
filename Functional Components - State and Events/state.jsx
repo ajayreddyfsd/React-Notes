@@ -10,14 +10,11 @@
 // Instead, always use the setter function like setCount(5)
 // to update the value and tell React to re-render the component.
 
-
-
-
 import React, { useState } from "react";
 
 function Counter() {
   // Step 2a: Declare a state variable count with initial value 0
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0); //! 0 is the initial value
 
   // Step 2b: Return JSX showing count and a button to increment it
   return (

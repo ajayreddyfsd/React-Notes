@@ -29,3 +29,5 @@ const App = () => {
 };
 
 export default App;
+
+//$ all the routes are nested inside navigation-route, coz we need to display navigation on each and every page
